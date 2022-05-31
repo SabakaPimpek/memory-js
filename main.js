@@ -60,7 +60,7 @@ function reset()
 function shuffle(cards) {
     cards.forEach(card =>
         {
-           let random = Math.floor(Math.random() * 20)
+           let random = Math.floor(Math.random() * 1000)
            card.style.order = random;
         })
 }
