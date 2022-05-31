@@ -73,8 +73,8 @@ function selectDifficulty(element) {
 
     for(i = 0; i < value; i++) //dodanie kart
     {
-        game.innerHTML += '<div class="card" data-image="'+ i +'"> <img src="img/0'+ i +'.jpg" alt="img0'+ i +'" class="front"> <img src="img/badge.jpg" alt="badge" class="back"></div>'
-        game.innerHTML += '<div class="card" data-image="'+ i +'"> <img src="img/0'+ i +'.jpg" alt="img0'+ i +'" class="front"> <img src="img/badge.jpg" alt="badge" class="back"></div>'
+        game.innerHTML += '<div class="card" data-image="'+ i +'"> <img src="img/0'+ i +'.svg" alt="img0'+ i +'" class="front"> <img src="img/badge.svg" alt="badge" class="back"></div>'
+        game.innerHTML += '<div class="card" data-image="'+ i +'"> <img src="img/0'+ i +'.svg" alt="img0'+ i +'" class="front"> <img src="img/badge.svg" alt="badge" class="back"></div>'
     }
 
     if(value > 8) game.classList.add("hard"); //Jeżeli par kart jest więcej niż 8 to dodaj
