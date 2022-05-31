@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="selection">
+        <div class="overlay"></div>
+        <div class="select_card" data-value="6">
+            <div>
+                <img src="img/star.png" alt="star">
+            </div>
+            <p>Łatwy</p>
+        </div>
+        <div class="select_card" data-value="8">
+            <div>
+                <img src="img/star.png" alt="star">
+                <img src="img/star.png" alt="star">
+            </div>
+            <p>Średni</p>
+        </div>
+        <div class="select_card" data-value="10">
+            <div>
+                <img src="img/star.png" alt="star">
+                <img src="img/star.png" alt="star">
+                <img src="img/star.png" alt="star">
+            </div>
+            <p>Trudny</p>
+        </div>
+    </section>
+    
+    <section class="game">
+    </section>
+
+    <section class="win">
+        <div class="overlay"></div>
+        <div>Wygrana!!</div>
+        <div class="again">Jeszcze raz?</div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+* 
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+user-select: none;
+}
+
+body
+{
+    background: #272727;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    perspective: 1000px;
+    
+}
+
+.hard
+{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.card
+{
+    width: 150px;
+    height: 200px;
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flip
+{
+    transform: rotateY(180deg);
+    user-select: none;
+}
+
+.front, .back
+{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background: #101010;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front
+{
+    transform: rotateY(180deg);
+}
+
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 1;
+}
+
+.selection, .win
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    color:white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: justify;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    z-index: 999;
+    font-size: 250%;
+}
+
+.selection.hidden
+{
+    display: none;
+}
+
+.select_card
+{
+    background-color: hsl(216, 50%, 16%);
+    width: 20%;
+    height: 30%;
+    margin: 50px;
+    z-index: 9999;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s transform ease-in-out;
+}
+
+.select_card:hover
+{
+    transform: scale(1.1);
+}
+
+.select_card > p:last-child
+{
+    font-weight: 400;
+}
+
+.win {
+    flex-direction: column;
+    display: none;
+}
+
+.win > div
+{
+    z-index: 99;
+}
+
+.win.active {
+    display: flex;
+}
+
+.again
+{
+    margin: 20px;
+    font-size: 90%;
+    border: 1px solid #606060;
+    background-color: #606060;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s transform ease-in-out;
+}
+
+.again:hover
+{
+    transform: scale(1.1);
+}
